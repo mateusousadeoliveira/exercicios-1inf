@@ -12,7 +12,10 @@ const subtotal = preco * quantidade
 const valorDesconto = subtotal * descontoPercentual/100
 const valorFinal = subtotal - valorDesconto
 const troco = valorPago - valorFinal
-const resumo = `==================
+const resumo = `${cliente} fez um pedio de um ${produto}, pagando R$ ${valorFinal} e recebendo R$ ${troco} de troco`
+
+console.log(resumo)
+console.log(`==================
 TECHSTORE SISTEMAS
 RESUMO DO PEDIDO
 ==================
@@ -34,10 +37,7 @@ Valor pago: R$ ${valorPago}
 Troco: R$ ${troco}
 
 Obrigado pela compra!
-======================
-`
-console.log(resumo)
-
+======================`)
 
 
 
