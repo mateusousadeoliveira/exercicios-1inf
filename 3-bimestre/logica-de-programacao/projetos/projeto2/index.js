@@ -5,36 +5,35 @@ const quantidade = 2
 const estoque = 10
 const valorPago = 9000
 const subtotal = preco * quantidade
-let descontoPercentual = "nenhum"
+let descontoPercentual = 0
 
 if (subtotal >= 1000) {
     descontoPercentual = 10
-} else {
-    descontoPercentual = 0
 }
+
 const valorDesconto = subtotal * descontoPercentual / 100
 const valorFinal = subtotal - valorDesconto
-const troco = valorPago - valorFinal
 
+let troco = "Aguardando"
 let statusPedido = "Aguardando"
-let pagamentoStatus = "aguardo"
-let estoqueDisponivel = "aguardando"
-
-
+let pagamentoStatus = "Aguardando"
+let estoqueDisponivel = "Aguardando"
 
 if (estoque >= quantidade){
-    estoqueDisponivel = "Sim"
+    estoqueDisponivel = "Estoque disponível"
     statusPedido = "Pedido disponível para finalização"
 } else{
-    statusPedido = "Pedido não disponível para finalização"
-    estoqueDisponivel = "Não"
+    statusPedido = "Pedido não pode ser finalizado por falta de estoque"
+    estoqueDisponivel = "Indisponível"
 }
 
 if (valorPago >= valorFinal) {
-    pagamentoStatus = "Pagamento aprovado" 
+    pagamentoStatus = "Pagamento aprovado"
+    troco = valorPago - valorFinal
     
 } else {
     pagamentoStatus = "Pagamento insuficiente"
+    troco = 0
 }
 
 const resumo = `Cliente: ${cliente}
@@ -48,11 +47,10 @@ Valor Desconto: R$ ${valorDesconto}
 Valor Final R$ ${valorFinal}
 Troco R$ ${troco}
 Pagamento: ${pagamentoStatus}
-Estoque disponível: ${estoqueDisponivel}
+Situação do estoque: ${estoqueDisponivel}
 Status do pedido: ${statusPedido}`
 
 console.log(resumo)
-
 
 module.exports = {
     cliente,
