@@ -2,7 +2,7 @@ const nome = "Mateus Oliveira"
 const idade = 31
 const categoria = "comum"
 const possuiMatricula = true
-const inadiplante = false
+const inadimplente = false
 const valorMensalidade = 100
 const valorPago = 100
 let idadeStatus = "Aguardando"
@@ -24,7 +24,7 @@ if (categoria === "intrutor" || categoria === "coordenador"){
     nivelAcesso = "Acesso comum"
 }
 
-if (possuiMatricula && idade >= 18 && !inadiplante){
+if (possuiMatricula && idade >= 18 && !inadimplente){
     acessoStatus = "Acesso à aula liberado"
 } else{
     acessoStatus = "Acesso à aula negado"
@@ -38,7 +38,7 @@ if (valorPago >= valorMensalidade){
     troco = 0
 }
 
-if (acessoStatus === "Acesso á aula liberado" && pagamentoStatus === "Pagamento aprovado"){
+if (acessoStatus === "Acesso à aula liberado" && pagamentoStatus === "Pagamento aprovado"){
     statusAula = "Presença na aula confirmada"
 } else {
     statusAula = "Presença na aula não confirmada"
