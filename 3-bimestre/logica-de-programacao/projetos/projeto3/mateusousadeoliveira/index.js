@@ -54,6 +54,8 @@ Situação do acesso: ${acessoStatus}
 Situação do pagamento: ${pagamentoStatus}
 Situação final: ${statusAula}`
 
+console.log(resumo)
+
 module.exports = {
     nome,
     idade,
