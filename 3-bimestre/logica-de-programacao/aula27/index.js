@@ -1,14 +1,13 @@
-const idade = 25
-const cargo = "gerente"
-const ativo = true
+const estoque = 10
 let resultado
 
-if (idade >= 18 && cargo === "gerente" && ativo){
-    resultado = "Acesso permitido"
-} else {
-    resultado = "Acesso negado"
+if (estoque > 0){
+    resultado = "Produto disponível"
+} else{
+    resultado ="Produto esgotado"
 }
- console.log(resultado)
+
+console.log(resultado)
 
 // === FIM DO CÓDIGO =======================
 // === NÃO FAZER NADA ABAIXO DESSA LINHA ===
