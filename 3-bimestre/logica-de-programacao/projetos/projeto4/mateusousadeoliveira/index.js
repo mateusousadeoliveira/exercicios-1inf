@@ -38,7 +38,7 @@ const freteStatus = frete === 0 ? "Frete grátis" : "Frete pago"
 
 switch (formaPagamento){
     case "pix":
-        pagamentoMensagem = "Pagamento via Pix"
+        pagamentoMensagem = "Pagamento via PIX"
         descontoPercentual = 0
         break
     case "cartao":
@@ -90,3 +90,22 @@ Situação do pedido: ${statusMensagem}
 `
 
 console.log(resumo)
+
+module.exports = {
+    cliente,
+    opcaoMenu,
+    quantidade,
+    formaPagamento,
+    statusPedido,
+    prato,
+    precoUnitario,
+    subtotal,
+    freteStatus,
+    frete,
+    pagamentoMensagem,
+    descontoPercentual,
+    desconto,
+    total,
+    statusMensagem,
+    resumo
+}
