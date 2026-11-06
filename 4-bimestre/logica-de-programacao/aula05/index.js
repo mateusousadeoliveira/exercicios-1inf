@@ -11,4 +11,4 @@ for(let dia = 1; dia <= dias; dia++){
 }
 
 console.log(totalProduzido)
-module.exports = totalProduzido;
+module.exports = totalProduzido

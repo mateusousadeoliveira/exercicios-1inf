@@ -7,3 +7,4 @@ while (caixas < meta){
     console.log(caixas)
 }
 
+module.exports = caixas
